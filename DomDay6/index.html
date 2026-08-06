@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <h1>Task Management System</h1>
+        <button id="add_main_task_btn">Add Task</button>
+
+        <div class="main_task_wraper">
+            <div id="task_wraper"></div>
+        </div>
+
+        <div class="modal">
+            <div class="header">
+                <h2>TITLE</h2>
+                <hr />
+            </div>
+
+            <input type="text" class="input_box_new_task" id="new_task" name="new_task" value="" placeholder="Please enter your task" />
+
+            <div class="btns">
+                <button id="cancel_task_btn">Cancel</button>
+                <button id="Submit_task_btn">Submit</button>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

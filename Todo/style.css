@@ -1,0 +1,508 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#eef2f7;
+
+    padding:40px;
+
+}
+
+/* ================= Top Bar ================= */
+
+.top-bar{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:40px;
+
+}
+
+#btn{
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+#btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= Card Wrapper ================= */
+
+#main_container_wraper{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+
+    gap:25px;
+
+}
+
+/* ================= Card ================= */
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ================= Card Header ================= */
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:#2563eb;
+
+    padding:15px;
+
+    gap:10px;
+
+}
+
+.card-header h2{
+
+    flex:1;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+.card-header .buttons{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.card-header button{
+
+    border:none;
+
+    padding:8px 12px;
+
+    cursor:pointer;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.rename-btn{
+
+    background:#f59e0b;
+
+    color:white;
+
+}
+
+.rename-btn:hover{
+
+    background:#d97706;
+
+}
+
+.add-task-btn{
+
+    background:#10b981;
+
+    color:white;
+
+}
+
+.add-task-btn:hover{
+
+    background:#059669;
+
+}
+
+/* ================= Task Container ================= */
+
+.task-container{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    min-height:80px;
+
+}
+
+/* ================= Task ================= */
+
+.task{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px;
+
+    background:#f9fafb;
+
+    border-radius:8px;
+
+    border:1px solid #ddd;
+
+    transition:.3s;
+
+}
+
+.task:hover{
+
+    background:#f1f5f9;
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.left span{
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.left input{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+}
+
+.right{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+/* ================= Buttons ================= */
+
+.edit-btn{
+
+    background:#f59e0b;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+.edit-btn:hover{
+
+    background:#d97706;
+
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+/* ================= Delete Card ================= */
+
+.delete-card-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.delete-card-btn:hover{
+
+    background:#dc2626;
+
+}
+
+/* ================= Completed ================= */
+
+.completed span{
+
+    text-decoration:line-through;
+
+    color:#9ca3af;
+
+}
+
+/* ================= Modal ================= */
+
+.modal{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.5);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+/* ================= Modal Content ================= */
+
+.modal-content{
+
+    width:400px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    animation:popup .25s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.modal-content h2{
+
+    margin-bottom:20px;
+
+}
+
+.modal-content input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.modal-content input:focus{
+
+    border:1px solid #2563eb;
+
+}
+
+/* ================= Modal Buttons ================= */
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+#cancelBtn{
+
+    padding:10px 20px;
+
+    border:none;
+
+    background:#6b7280;
+
+    color:white;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+#cancelBtn:hover{
+
+    background:#4b5563;
+
+}
+
+#saveBtn{
+
+    padding:10px 20px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+#saveBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .modal-content{
+
+        width:90%;
+
+    }
+
+}

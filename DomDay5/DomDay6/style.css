@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    padding:40px;
+}
+
+input{
+    width:350px;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    font-size:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+#btn{
+    padding:14px 25px;
+    margin-left:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    transition:.3s;
+}
+
+#btn:hover{
+    transform:translateY(-2px);
+    background:#1d4ed8;
+}
+
+#main_container_wraper{
+
+    margin-top:40px;
+    display:flex;
+    flex-wrap: wrap;
+    /* grid-template-columns:auto auto auto; */
+    gap:25px;
+}
+
+/* ---------------- Card ---------------- */
+
+.card{
+    width: 300px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2563eb;
+    color:white;
+    padding:15px;
+}
+
+.card-header h2{
+    flex:1;
+    text-align:center;
+    font-size:22px;
+}
+
+.card-header button{
+    background:white;
+    color:#2563eb;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.card-header button:hover{
+    background:#dbeafe;
+}
+
+.task-container{
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    min-height:80px;
+}
+
+/* ---------------- Task ---------------- */
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    border-radius:8px;
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    transition:.3s;
+}
+
+.task:hover{
+    background:#eff6ff;
+}
+
+.task div:first-child{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.task span{
+    font-size:16px;
+    font-weight:500;
+}
+
+.task input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+/* Buttons */
+
+.task button{
+    border:none;
+    padding:7px 12px;
+    margin-left:8px;
+    border-radius:6px;
+    cursor:pointer;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.task button:hover{
+    transform:scale(1.05);
+}
+
+.task button:nth-child(1){
+    background:#f59e0b;
+}
+
+.task button:nth-child(2){
+    background:#ef4444;
+}
+
+/* Delete Card */
+
+.card>button{
+    width:100%;
+    border:none;
+    padding:15px;
+    background:#ef4444;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card>button:hover{
+    background:#dc2626;
+}
+
+/* Completed Task */
+
+.completed span{
+    text-decoration:line-through;
+    color:#9ca3af;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    body{
+        padding:20px;
+    }
+
+    input{
+        width:100%;
+    }
+
+    #btn{
+        width:100%;
+        margin-top:10px;
+        margin-left:0;
+    }
+
+}

@@ -1,0 +1,62 @@
+.modal{
+    width: 350px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+    position: fixed;
+    top: 39%;
+    left: 40%;
+    display: none;
+}
+.header{
+    text-align: center;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 0px;
+}
+.input_box_new_task{
+    height: 50px;
+    margin-bottom: 60px;
+}
+.main_task_wraper{
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#task_wraper{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.main_container_of_task{
+    width: 350px;
+    height: 250px;
+    border: 2px solid black;
+}
+
+.task_header{
+    border: 2px solid blue;
+
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+     /* height: 10px; */
+}
+
+.Task_content{
+     border: 2px solid rgb(55, 255, 0);
+      /* height: 10px; */
+}
+
+.Task_footer{
+      border: 2px solid rgb(255, 0, 149);
+      /* height: 10px; */
+}
