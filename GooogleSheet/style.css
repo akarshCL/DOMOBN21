@@ -1,0 +1,38 @@
+body{
+    font-family:Arial;
+    padding:20px;
+    background:#f3f3f3;
+}
+
+table{
+    border-collapse:collapse;
+    background:white;
+}
+
+td,th{
+    border:1px solid #ccc;
+    width:120px;
+    height:35px;
+    text-align:center;
+}
+
+td{
+    cursor:text;
+}
+
+.selected{
+    outline:2px solid green;
+}
+
+button{
+    padding:10px 20px;
+    margin-bottom:20px;
+}
+
+#box{
+width:100px;
+height:100px;
+background:red;
+position:absolute;
+cursor:grab;
+}
